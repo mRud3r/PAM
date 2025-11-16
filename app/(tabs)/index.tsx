@@ -4,6 +4,7 @@ import StyledText from '@/components/Zad_3/styled-text';
 import FlexboxLayout from '@/components/Zad_4/flexbox-layout';
 import UserName from '@/components/Zad_5/user-name';
 import UserSurname from '@/components/Zad_5/user-surname';
+import LayoutWithBlocks from '@/components/Zad_6/layout-with-blocks';
 import { View, Text } from 'react-native';
 
 export default function HomeScreen() {
@@ -21,6 +22,8 @@ export default function HomeScreen() {
       <Text>
         <UserName name='Mikołaj' /> <UserSurname surname='Rudkowski' />
       </Text>
+      <Text>Zad. 6</Text>
+      <LayoutWithBlocks />
     </View>
   );
 }
