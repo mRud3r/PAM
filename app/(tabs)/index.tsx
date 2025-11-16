@@ -2,6 +2,8 @@ import DateDisplay from '@/components/Zad_1/date-display';
 import MapImage from '@/components/Zad_2/map-image';
 import StyledText from '@/components/Zad_3/styled-text';
 import FlexboxLayout from '@/components/Zad_4/flexbox-layout';
+import UserName from '@/components/Zad_5/user-name';
+import UserSurname from '@/components/Zad_5/user-surname';
 import { View, Text } from 'react-native';
 
 export default function HomeScreen() {
@@ -16,6 +18,9 @@ export default function HomeScreen() {
       <Text>Zad. 4</Text>
       <FlexboxLayout />
       <Text>Zad. 5</Text>
+      <Text>
+        <UserName name='Mikołaj' /> <UserSurname surname='Rudkowski' />
+      </Text>
     </View>
   );
 }
