@@ -16,6 +16,7 @@ export default function FlexboxLayout() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    minHeight: 240
   },
   blueBox: {
     flex: 1,
