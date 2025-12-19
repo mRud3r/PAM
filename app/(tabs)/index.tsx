@@ -6,7 +6,11 @@ import UserName from '@/components/Zad_5/user-name'
 import UserSurname from '@/components/Zad_5/user-surname'
 import LayoutWithBlocks from '@/components/Zad_6/layout-with-blocks'
 import InvitationCard from '@/components/Zad_7/invitation-card'
+import DataTimer from '@/components/Zad_8/data-timer'
 import { Text, ScrollView } from 'react-native'
+import useTime from '@/components/Zad_9/use-time'
+import { useState } from 'react'
+import RandomNumberGenerator from '@/components/Zad_10/random-number-generator'
 
 interface InviteData {
   date: string
@@ -23,6 +27,9 @@ const inviteData: InviteData = {
 }
 
 export default function HomeScreen() {
+  const currentTime = useTime()
+  const [randomNumber, setRandomNumber] = useState<number>(0)
+
 	return (
 		<ScrollView
 			contentContainerStyle={{ padding: 24 }}
@@ -55,9 +62,11 @@ export default function HomeScreen() {
         location={inviteData.location}
         dressCode={inviteData.dressCode}
       />
-			<Text>Zad. 8</Text>
-			<Text>Zad. 9</Text>
+			<Text>Zad. 8 i 9</Text>
+      <DataTimer currentTime={currentTime} />
 			<Text>Zad. 10</Text>
+      <Text>Aktualna losowa liczba: {randomNumber}</Text>
+      <RandomNumberGenerator onGenerate={setRandomNumber} />
 		</ScrollView>
 	)
 }
